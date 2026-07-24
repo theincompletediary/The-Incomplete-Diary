@@ -14,7 +14,187 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 </style>
+/* ================= QUOTE ================= */
 
+.quoteCard{
+
+max-width:900px;
+
+margin:60px auto;
+
+background:#FFFCF8;
+
+padding:70px;
+
+border-radius:25px;
+
+box-shadow:0 20px 60px rgba(0,0,0,.08);
+
+text-align:center;
+
+}
+
+.quoteMark{
+
+font-size:90px;
+
+color:#B58C58;
+
+font-family:'Cormorant Garamond',serif;
+
+}
+
+.quote{
+
+font-family:'Cormorant Garamond',serif;
+
+font-size:34px;
+
+line-height:1.7;
+
+color:#4B3E35;
+
+margin:20px 0;
+
+}
+
+.quoteAuthor{
+
+margin-top:25px;
+
+letter-spacing:3px;
+
+text-transform:uppercase;
+
+font-size:13px;
+
+color:#A87A4D;
+
+}
+
+/* ================= CARDS ================= */
+
+.cards{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+gap:30px;
+
+margin-top:60px;
+
+}
+
+.card{
+
+background:white;
+
+padding:40px;
+
+border-radius:20px;
+
+box-shadow:0 15px 40px rgba(0,0,0,.08);
+
+transition:.35s;
+
+}
+
+.card:hover{
+
+transform:translateY(-8px);
+
+}
+
+.card h3{
+
+font-family:'Cormorant Garamond',serif;
+
+font-size:32px;
+
+margin-bottom:15px;
+
+}
+
+.card p{
+
+line-height:1.8;
+
+margin-bottom:20px;
+
+color:#666;
+
+}
+
+.card a{
+
+color:#A87A4D;
+
+font-weight:600;
+
+}
+
+.emoji{
+
+font-size:42px;
+
+margin-bottom:20px;
+
+}
+
+/* ================= INSTAGRAM ================= */
+
+.instagram{
+
+text-align:center;
+
+}
+
+.instaButton{
+
+display:inline-block;
+
+margin-top:40px;
+
+padding:18px 45px;
+
+background:#2B2B2B;
+
+color:white;
+
+border-radius:60px;
+
+font-weight:600;
+
+transition:.3s;
+
+}
+
+.instaButton:hover{
+
+background:#A87A4D;
+
+transform:translateY(-3px);
+
+}
+
+/* ================= ABOUT ================= */
+
+.aboutText{
+
+max-width:850px;
+
+margin:auto;
+
+font-size:20px;
+
+line-height:2;
+
+text-align:center;
+
+color:#666;
+
+}
 *{
 margin:0;
 padding:0;
@@ -503,8 +683,7 @@ Explore
 </div>
 
 </section>
-
- <!-- ================= FEATURED QUOTE ================= -->
+<!-- ================= FEATURED QUOTE ================= -->
 
 <section id="featured">
 
@@ -669,188 +848,7 @@ Explore
     </p>
 
 </section>
-/* ================= QUOTE ================= */
-
-.quoteCard{
-
-max-width:900px;
-
-margin:60px auto;
-
-background:#FFFCF8;
-
-padding:70px;
-
-border-radius:25px;
-
-box-shadow:0 20px 60px rgba(0,0,0,.08);
-
-text-align:center;
-
-}
-
-.quoteMark{
-
-font-size:90px;
-
-color:#B58C58;
-
-font-family:'Cormorant Garamond',serif;
-
-}
-
-.quote{
-
-font-family:'Cormorant Garamond',serif;
-
-font-size:34px;
-
-line-height:1.7;
-
-color:#4B3E35;
-
-margin:20px 0;
-
-}
-
-.quoteAuthor{
-
-margin-top:25px;
-
-letter-spacing:3px;
-
-text-transform:uppercase;
-
-font-size:13px;
-
-color:#A87A4D;
-
-}
-
-/* ================= CARDS ================= */
-
-.cards{
-
-display:grid;
-
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-
-gap:30px;
-
-margin-top:60px;
-
-}
-
-.card{
-
-background:white;
-
-padding:40px;
-
-border-radius:20px;
-
-box-shadow:0 15px 40px rgba(0,0,0,.08);
-
-transition:.35s;
-
-}
-
-.card:hover{
-
-transform:translateY(-8px);
-
-}
-
-.card h3{
-
-font-family:'Cormorant Garamond',serif;
-
-font-size:32px;
-
-margin-bottom:15px;
-
-}
-
-.card p{
-
-line-height:1.8;
-
-margin-bottom:20px;
-
-color:#666;
-
-}
-
-.card a{
-
-color:#A87A4D;
-
-font-weight:600;
-
-}
-
-.emoji{
-
-font-size:42px;
-
-margin-bottom:20px;
-
-}
-
-/* ================= INSTAGRAM ================= */
-
-.instagram{
-
-text-align:center;
-
-}
-
-.instaButton{
-
-display:inline-block;
-
-margin-top:40px;
-
-padding:18px 45px;
-
-background:#2B2B2B;
-
-color:white;
-
-border-radius:60px;
-
-font-weight:600;
-
-transition:.3s;
-
-}
-
-.instaButton:hover{
-
-background:#A87A4D;
-
-transform:translateY(-3px);
-
-}
-
-/* ================= ABOUT ================= */
-
-.aboutText{
-
-max-width:850px;
-
-margin:auto;
-
-font-size:20px;
-
-line-height:2;
-
-text-align:center;
-
-color:#666;
-
-}
- <!-- ================= FOOTER ================= -->
+<!-- ================= FOOTER ================= -->
 
 <footer>
 
