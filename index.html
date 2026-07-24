@@ -9,9 +9,12 @@
   * { margin: 0; padding: 0; box-sizing: border-box; }
 
   body {
-    background: #0d0d0d;
-    color: #f2e6c9;
-    font-family: Georgia, 'Times New Roman', serif;
+    body{
+    background:
+        radial-gradient(circle at top,#ffffff,#F7F4ED);
+    color:#2C2926;
+}
+    font-family:'Inter',sans-serif;
     min-height: 100vh;
     display: flex;
     align-items: center;
@@ -20,19 +23,37 @@
   }
 
   .card {
-    max-width: 480px;
+    max-width:900px;
+padding:60px;
     width: 100%;
     text-align: center;
   }
 
   .logo {
-    width: 180px;
-    height: 180px;
-    margin: 0 auto 28px;
-    border-radius: 50%;
-    overflow: hidden;
-    border: 1px solid #a8925f;
-  }
+    width:220px;
+height:220px;
+
+padding:18px 40px;
+
+border-radius:100px;
+
+font-family:Inter,sans-serif;
+
+font-weight:600;
+
+background:#2C2926;
+
+color:white;
+
+border:none;
+
+transition:.35s;
+
+border:2px solid #B58C58;
+
+box-shadow:
+
+0 20px 60px rgba(0,0,0,.12);
 
   .logo img {
     width: 100%;
@@ -40,29 +61,32 @@
     object-fit: contain;
   }
 
-  h1 {
-    font-size: 30px;
-    font-weight: 400;
-    letter-spacing: 2px;
-    margin-bottom: 18px;
-  }
+  h1{
+font-family:'Cormorant Garamond',serif;
+font-size:56px;
+font-weight:600;
+letter-spacing:3px;
+margin-bottom:20px;
+}
 
   .bio {
     font-size: 17px;
-    font-style: italic;
-    color: #cbb989;
-    line-height: 1.7;
-    margin-bottom: 30px;
-    padding: 0 10px;
-  }
+    font-family:'Cormorant Garamond',serif;
+font-style:italic;
+font-size:24px;
+line-height:1.7;
+max-width:520px;
+margin:auto;
+color:#7D6245;
 
   .divider {
-    width: 60px;
-    height: 1px;
-    background: #a8925f;
-    margin: 0 auto 30px;
-    opacity: 0.6;
-  }
+   width:140px;
+
+height:2px;
+
+background:#B58C58;
+
+margin:35px auto;
 
   .social {
     display: inline-flex;
@@ -79,17 +103,33 @@
     transition: background 0.2s ease, color 0.2s ease;
   }
 
-  .social:hover {
-    background: #a8925f;
-    color: #0d0d0d;
-  }
+  .social:hover{
 
-  footer {
-    margin-top: 50px;
-    font-size: 12px;
-    color: #6b5e41;
-    letter-spacing: 1px;
-  }
+background:#A87A4D;
+
+transform:translateY(-3px);
+
+box-shadow:
+
+0 15px 30px rgba(0,0,0,.15);
+
+}
+
+  footer{
+
+margin-top:70px;
+
+font-family:Inter,sans-serif;
+
+letter-spacing:4px;
+
+text-transform:uppercase;
+
+font-size:12px;
+
+color:#A88D69;
+
+}
 </style>
 </head>
 <body>
@@ -114,3 +154,31 @@
 
 </body>
 </html>
+background:
+url("paper.jpg"),
+#F7F4ED;
+.card{
+
+animation:fade 1.5s ease;
+
+}
+
+@keyframes fade{
+
+from{
+
+opacity:0;
+
+transform:translateY(40px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
