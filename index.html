@@ -1,236 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>The Incomplete Diary</title>
 
-<meta name="description" content="The Incomplete Diary — Some stories are never finished. They simply become a part of us.">
+<meta name="description"
+content="A digital journal of unfinished thoughts.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
+
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-</style>
-/* ================= QUOTE ================= */
+<style>
 
-.quoteCard{
+:root{
 
-max-width:900px;
+--bg:#F6F2EA;
 
-margin:60px auto;
+--paper:#FFFDF9;
 
-background:#FFFCF8;
+--text:#272522;
 
-padding:70px;
+--coffee:#7A5C44;
 
-border-radius:25px;
+--gold:#C5A46D;
 
-box-shadow:0 20px 60px rgba(0,0,0,.08);
-
-text-align:center;
+--line:#E8DFD1;
 
 }
 
-.quoteMark{
-
-font-size:90px;
-
-color:#B58C58;
-
-font-family:'Cormorant Garamond',serif;
-
-}
-
-.quote{
-
-font-family:'Cormorant Garamond',serif;
-
-font-size:34px;
-
-line-height:1.7;
-
-color:#4B3E35;
-
-margin:20px 0;
-
-}
-
-.quoteAuthor{
-
-margin-top:25px;
-
-letter-spacing:3px;
-
-text-transform:uppercase;
-
-font-size:13px;
-
-color:#A87A4D;
-
-}
-
-/* ================= CARDS ================= */
-
-.cards{
-
-display:grid;
-
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-
-gap:30px;
-
-margin-top:60px;
-
-}
-
-.card{
-
-background:white;
-
-padding:40px;
-
-border-radius:20px;
-
-box-shadow:0 15px 40px rgba(0,0,0,.08);
-
-transition:.35s;
-
-}
-
-.card:hover{
-
-transform:translateY(-8px);
-
-}
-
-.card h3{
-
-font-family:'Cormorant Garamond',serif;
-
-font-size:32px;
-
-margin-bottom:15px;
-
-}
-
-.card p{
-
-line-height:1.8;
-
-margin-bottom:20px;
-
-color:#666;
-
-}
-
-.card a{
-
-color:#A87A4D;
-
-font-weight:600;
-
-}
-
-.emoji{
-
-font-size:42px;
-
-margin-bottom:20px;
-
-}
-
-/* ================= INSTAGRAM ================= */
-
-.instagram{
-
-text-align:center;
-
-}
-
-.instaButton{
-
-display:inline-block;
-
-margin-top:40px;
-
-padding:18px 45px;
-
-background:#2B2B2B;
-
-color:white;
-
-border-radius:60px;
-
-font-weight:600;
-
-transition:.3s;
-
-}
-
-.instaButton:hover{
-
-background:#A87A4D;
-
-transform:translateY(-3px);
-
-}
-
-/* ================= ABOUT ================= */
-
-.aboutText{
-
-max-width:850px;
-
-margin:auto;
-
-font-size:20px;
-
-line-height:2;
-
-text-align:center;
-
-color:#666;
-
-}
 *{
+
 margin:0;
+
 padding:0;
+
 box-sizing:border-box;
+
 }
 
 html{
+
 scroll-behavior:smooth;
+
 }
 
 body{
 
 font-family:'Inter',sans-serif;
 
-background:#F7F4ED;
+background:var(--bg);
 
-background-image:
-radial-gradient(circle at top,#ffffff,#F7F4ED);
-
-color:#2B2B2B;
+color:var(--text);
 
 overflow-x:hidden;
 
 }
 
+/* subtle paper texture */
+
+body::before{
+
+content:"";
+
+position:fixed;
+
+inset:0;
+
+background-image:
+
+radial-gradient(rgba(0,0,0,.025) 1px, transparent 1px);
+
+background-size:14px 14px;
+
+opacity:.25;
+
+pointer-events:none;
+
+z-index:-1;
+
+}
+
 a{
+
 text-decoration:none;
+
 color:inherit;
+
 }
 
 img{
-max-width:100%;
+
 display:block;
+
+max-width:100%;
+
 }
 
-/* ---------------- NAVBAR ---------------- */
+/* NAVBAR */
 
 nav{
 
@@ -242,7 +116,7 @@ left:0;
 
 width:100%;
 
-padding:25px 8%;
+padding:22px 7%;
 
 display:flex;
 
@@ -250,25 +124,25 @@ justify-content:space-between;
 
 align-items:center;
 
-background:rgba(247,244,237,.75);
+background:rgba(246,242,234,.82);
 
-backdrop-filter:blur(18px);
-
-z-index:999;
+backdrop-filter:blur(16px);
 
 border-bottom:1px solid rgba(0,0,0,.05);
 
+z-index:999;
+
 }
 
-.logoText{
+.brand{
 
 font-family:'Cormorant Garamond',serif;
 
-font-size:28px;
+font-size:30px;
 
 letter-spacing:3px;
 
-font-weight:600;
+font-weight:700;
 
 }
 
@@ -276,7 +150,7 @@ nav ul{
 
 display:flex;
 
-gap:35px;
+gap:34px;
 
 list-style:none;
 
@@ -284,7 +158,7 @@ list-style:none;
 
 nav li{
 
-font-size:14px;
+font-size:13px;
 
 font-weight:600;
 
@@ -292,19 +166,17 @@ letter-spacing:2px;
 
 text-transform:uppercase;
 
-transition:.3s;
-
-cursor:pointer;
+transition:.35s;
 
 }
 
 nav li:hover{
 
-color:#A87A4D;
+color:var(--coffee);
 
 }
 
-/* ---------------- HERO ---------------- */
+/* HERO */
 
 .hero{
 
@@ -312,25 +184,23 @@ min-height:100vh;
 
 display:flex;
 
-justify-content:center;
-
 align-items:center;
 
-padding:140px 8% 80px;
+justify-content:center;
 
-}
-
-.heroContent{
-
-max-width:900px;
+padding:120px 30px 80px;
 
 text-align:center;
 
-animation:fadeUp 1.2s ease;
-
 }
 
-/* Logo */
+.heroInner{
+
+max-width:900px;
+
+animation:fade 1.2s ease;
+
+}
 
 .heroLogo{
 
@@ -340,19 +210,17 @@ height:220px;
 
 margin:auto;
 
-margin-bottom:45px;
-
 border-radius:50%;
 
 overflow:hidden;
 
-border:2px solid #B58C58;
-
-box-shadow:
-
-0 20px 60px rgba(0,0,0,.10);
-
 background:white;
+
+border:2px solid var(--gold);
+
+box-shadow:0 25px 70px rgba(0,0,0,.10);
+
+margin-bottom:45px;
 
 }
 
@@ -370,7 +238,7 @@ object-fit:cover;
 
 font-family:'Cormorant Garamond',serif;
 
-font-size:68px;
+font-size:72px;
 
 font-weight:600;
 
@@ -380,7 +248,7 @@ margin-bottom:25px;
 
 }
 
-.tagline{
+.hero p{
 
 font-family:'Cormorant Garamond',serif;
 
@@ -388,113 +256,83 @@ font-size:30px;
 
 font-style:italic;
 
-line-height:1.7;
+line-height:1.8;
 
-color:#7A5C44;
+color:var(--coffee);
 
 max-width:700px;
 
 margin:auto;
 
-margin-bottom:45px;
+}
+
+.line{
+
+width:120px;
+
+height:2px;
+
+background:var(--gold);
+
+margin:45px auto;
 
 }
 
-.heroButtons{
+.button{
 
-display:flex;
+display:inline-block;
 
-justify-content:center;
+padding:18px 42px;
 
-gap:20px;
+background:var(--text);
 
-flex-wrap:wrap;
+color:white;
 
-}
+border-radius:50px;
 
-/* Buttons */
-
-.btn{
-
-padding:16px 38px;
-
-border-radius:60px;
-
-font-weight:600;
+font-size:13px;
 
 letter-spacing:2px;
 
 text-transform:uppercase;
 
-font-size:14px;
+font-weight:600;
 
 transition:.35s;
 
 }
 
-.primary{
+.button:hover{
 
-background:#2B2B2B;
+background:var(--coffee);
 
-color:white;
+transform:translateY(-4px);
 
-}
-
-.primary:hover{
-
-background:#A87A4D;
-
-transform:translateY(-3px);
-
-box-shadow:0 15px 30px rgba(0,0,0,.15);
+box-shadow:0 20px 40px rgba(0,0,0,.15);
 
 }
-
-.secondary{
-
-border:1px solid #A87A4D;
-
-color:#A87A4D;
-
-}
-
-.secondary:hover{
-
-background:#A87A4D;
-
-color:white;
-
-transform:translateY(-3px);
-
-}
-
-/* Scroll */
 
 .scroll{
 
 margin-top:70px;
 
-font-size:13px;
-
 letter-spacing:4px;
 
 text-transform:uppercase;
 
-color:#A87A4D;
+font-size:12px;
 
-animation:float 2.5s infinite;
+color:var(--coffee);
+
+animation:float 2s infinite;
 
 }
 
-/* Sections */
+/* section */
 
 section{
 
-padding:100px 8%;
-
-max-width:1200px;
-
-margin:auto;
+padding:120px 8%;
 
 }
 
@@ -502,17 +340,17 @@ margin:auto;
 
 font-family:'Cormorant Garamond',serif;
 
-font-size:48px;
-
-margin-bottom:25px;
+font-size:56px;
 
 text-align:center;
 
+margin-bottom:20px;
+
 }
 
-.sectionText{
+.sectionSub{
 
-max-width:720px;
+max-width:650px;
 
 margin:auto;
 
@@ -520,15 +358,15 @@ text-align:center;
 
 font-size:18px;
 
-line-height:1.9;
+line-height:1.8;
 
 color:#666;
 
 }
 
-/* Animation */
+/* animations */
 
-@keyframes fadeUp{
+@keyframes fade{
 
 from{
 
@@ -550,12 +388,6 @@ transform:translateY(0);
 
 @keyframes float{
 
-0%,100%{
-
-transform:translateY(0);
-
-}
-
 50%{
 
 transform:translateY(8px);
@@ -564,15 +396,9 @@ transform:translateY(8px);
 
 }
 
-/* Mobile */
+/* mobile */
 
 @media(max-width:768px){
-
-nav{
-
-padding:20px;
-
-}
 
 nav ul{
 
@@ -582,13 +408,13 @@ display:none;
 
 .hero h1{
 
-font-size:46px;
+font-size:48px;
 
 }
 
-.tagline{
+.hero p{
 
-font-size:24px;
+font-size:22px;
 
 }
 
@@ -602,12 +428,412 @@ height:170px;
 
 .sectionTitle{
 
+font-size:42px;
+
+}
+
+}
+
+/* ================= DIARY ================= */
+
+.entryContainer{
+
+max-width:1100px;
+
+margin:auto;
+
+}
+
+.entryDate{
+
+text-align:center;
+
+letter-spacing:4px;
+
+font-size:13px;
+
+margin-bottom:20px;
+
+color:var(--coffee);
+
+}
+
+.diaryPage{
+
+background:var(--paper);
+
+padding:80px;
+
+max-width:760px;
+
+margin:70px auto;
+
+border-radius:18px;
+
+position:relative;
+
+box-shadow:0 30px 80px rgba(0,0,0,.08);
+
+border:1px solid var(--line);
+
+transition:.4s;
+
+}
+
+.diaryPage:hover{
+
+transform:translateY(-8px);
+
+}
+
+.paperPin{
+
+width:22px;
+
+height:22px;
+
+background:#C95A4A;
+
+border-radius:50%;
+
+position:absolute;
+
+top:24px;
+
+left:50%;
+
+transform:translateX(-50%);
+
+box-shadow:0 5px 15px rgba(0,0,0,.25);
+
+}
+
+.entryQuote{
+
+font-family:'Cormorant Garamond',serif;
+
+font-size:40px;
+
+line-height:1.8;
+
+text-align:center;
+
+white-space:pre-line;
+
+color:var(--text);
+
+}
+
+.entryAuthor{
+
+margin-top:45px;
+
+text-align:center;
+
+letter-spacing:3px;
+
+font-size:13px;
+
+text-transform:uppercase;
+
+color:var(--coffee);
+
+}
+
+/* ================= VOICE ================= */
+
+.voiceGrid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+
+gap:35px;
+
+margin-top:70px;
+
+}
+
+.voiceCard{
+
+background:white;
+
+padding:45px;
+
+border-radius:18px;
+
+box-shadow:0 20px 60px rgba(0,0,0,.08);
+
+transition:.35s;
+
+text-align:center;
+
+border:1px solid var(--line);
+
+}
+
+.voiceCard:hover{
+
+transform:translateY(-10px);
+
+}
+
+.voiceIcon{
+
+font-size:54px;
+
+margin-bottom:25px;
+
+}
+
+.voiceCard h3{
+
+font-family:'Cormorant Garamond',serif;
+
+font-size:34px;
+
+margin-bottom:20px;
+
+}
+
+.voiceCard p{
+
+line-height:1.9;
+
+color:#666;
+
+margin-bottom:25px;
+
+}
+
+.voiceCard a{
+
+color:var(--coffee);
+
+font-weight:600;
+
+}
+
+/* ================= INSTAGRAM ================= */
+
+.instagramBox{
+
+max-width:900px;
+
+margin:auto;
+
+padding:90px 60px;
+
+background:white;
+
+border-radius:24px;
+
+text-align:center;
+
+box-shadow:0 25px 70px rgba(0,0,0,.08);
+
+border:1px solid var(--line);
+
+}
+
+.instagramBox h2{
+
+font-family:'Cormorant Garamond',serif;
+
+font-size:52px;
+
+margin-bottom:25px;
+
+}
+
+.instagramBox p{
+
+font-size:20px;
+
+line-height:1.9;
+
+margin-bottom:40px;
+
+color:#666;
+
+}
+
+@media(max-width:768px){
+
+.diaryPage{
+
+padding:40px 28px;
+
+}
+
+.entryQuote{
+
+font-size:28px;
+
+}
+
+.instagramBox{
+
+padding:50px 25px;
+
+}
+
+.instagramBox h2{
+
 font-size:38px;
 
 }
 
 }
 
+/* ================= ABOUT ================= */
+
+.aboutWrap{
+
+display:grid;
+
+grid-template-columns:1fr 1fr;
+
+gap:80px;
+
+align-items:center;
+
+max-width:1200px;
+
+margin:auto;
+
+}
+
+.aboutLeft p{
+
+margin-top:30px;
+
+font-size:18px;
+
+line-height:2;
+
+color:#666;
+
+white-space:pre-line;
+
+}
+
+.aboutCard{
+
+background:white;
+
+padding:60px;
+
+border-radius:22px;
+
+box-shadow:0 25px 70px rgba(0,0,0,.08);
+
+border:1px solid var(--line);
+
+}
+
+.aboutCard h3{
+
+font-family:'Cormorant Garamond',serif;
+
+font-size:40px;
+
+margin-bottom:25px;
+
+}
+
+.aboutCard p{
+
+font-size:18px;
+
+line-height:2;
+
+color:#666;
+
+}
+
+/* ================= FEATURES ================= */
+
+.featureGrid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+gap:30px;
+
+margin-top:70px;
+
+}
+
+.feature{
+
+background:white;
+
+padding:40px;
+
+border-radius:18px;
+
+text-align:center;
+
+box-shadow:0 20px 60px rgba(0,0,0,.08);
+
+border:1px solid var(--line);
+
+transition:.35s;
+
+}
+
+.feature:hover{
+
+transform:translateY(-10px);
+
+}
+
+.feature span{
+
+font-size:52px;
+
+display:block;
+
+margin-bottom:20px;
+
+}
+
+.feature h3{
+
+font-family:'Cormorant Garamond',serif;
+
+font-size:32px;
+
+margin-bottom:20px;
+
+}
+
+.feature p{
+
+line-height:1.8;
+
+color:#666;
+
+}
+
+@media(max-width:900px){
+
+.aboutWrap{
+
+grid-template-columns:1fr;
+
+}
+
+.aboutCard{
+
+padding:40px;
+
+}
+
+}
+    
 </style>
 
 </head>
@@ -616,7 +842,7 @@ font-size:38px;
 
 <nav>
 
-<div class="logoText">
+<div class="brand">
 
 The Incomplete Diary
 
@@ -626,9 +852,9 @@ The Incomplete Diary
 
 <li>Home</li>
 
-<li>Quotes</li>
+<li>Diary</li>
 
-<li>Voice Overs</li>
+<li>Voice</li>
 
 <li>About</li>
 
@@ -640,17 +866,17 @@ The Incomplete Diary
 
 <section class="hero">
 
-<div class="heroContent">
+<div class="heroInner">
 
 <div class="heroLogo">
 
-<img src="logo.svg.jpeg" alt="The Incomplete Diary">
+<img src="logo.svg.jpeg" alt="Logo">
 
 </div>
 
 <h1>The Incomplete Diary</h1>
 
-<p class="tagline">
+<p>
 
 "Some stories are never finished.<br>
 
@@ -658,242 +884,426 @@ They simply become a part of us."
 
 </p>
 
-<div class="heroButtons">
+<div class="line"></div>
 
-<a href="https://instagram.com/theincompletediaryofficial" target="_blank" class="btn primary">
+<a href="#entry" class="button">
+
+Open The Diary
+
+</a>
+
+<div class="scroll">
+
+Scroll ↓
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ===================== DIARY ENTRY ===================== -->
+
+<section id="entry">
+
+<div class="entryContainer">
+
+<div class="entryDate">
+
+LATEST ENTRY
+
+</div>
+
+<h2 class="sectionTitle">
+
+A Page From The Diary
+
+</h2>
+
+<p class="sectionSub">
+
+Every diary has pages that remain folded.
+Not because they are forgotten,
+but because they still hurt to read.
+
+</p>
+
+<div class="diaryPage">
+
+<div class="paperPin"></div>
+
+<p class="entryQuote">
+
+Sometimes...
+
+the hardest goodbye
+
+isn't the one you said.
+
+It's the one
+
+you never had the chance to.
+
+</p>
+
+<div class="entryAuthor">
+
+— The Incomplete Diary
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- ===================== VOICE OVERS ===================== -->
+
+<section>
+
+<h2 class="sectionTitle">
+
+Voice Overs
+
+</h2>
+
+<p class="sectionSub">
+
+Every emotion deserves a voice.
+
+</p>
+
+<div class="voiceGrid">
+
+<div class="voiceCard">
+
+<div class="voiceIcon">
+
+🎙
+
+</div>
+
+<h3>
+
+Midnight Thoughts
+
+</h3>
+
+<p>
+
+Stories whispered when the world becomes quiet.
+
+</p>
+
+<a href="https://instagram.com/theincompletediaryofficial" target="_blank">
+
+Listen →
+
+</a>
+
+</div>
+
+
+
+<div class="voiceCard">
+
+<div class="voiceIcon">
+
+🌙
+
+</div>
+
+<h3>
+
+Healing
+
+</h3>
+
+<p>
+
+Some words don't heal instantly.
+
+They stay.
+
+They grow.
+
+</p>
+
+<a href="https://instagram.com/theincompletediaryofficial" target="_blank">
+
+Listen →
+
+</a>
+
+</div>
+
+
+
+<div class="voiceCard">
+
+<div class="voiceIcon">
+
+☕
+
+</div>
+
+<h3>
+
+Coffee & Silence
+
+</h3>
+
+<p>
+
+For evenings that needed no conversation.
+
+</p>
+
+<a href="https://instagram.com/theincompletediaryofficial" target="_blank">
+
+Listen →
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- ===================== INSTAGRAM ===================== -->
+
+<section>
+
+<div class="instagramBox">
+
+<h2>
+
+Follow The Journey
+
+</h2>
+
+<p>
+
+Every unfinished story eventually finds
+someone who understands it.
+
+</p>
+
+<a class="button"
+
+href="https://instagram.com/theincompletediaryofficial"
+
+target="_blank">
+
+Visit Instagram
+
+</a>
+
+</div>
+
+</section>    
+
+<!-- ===================== ABOUT ===================== -->
+
+<section id="about">
+
+<div class="aboutWrap">
+
+<div class="aboutLeft">
+
+<h2 class="sectionTitle">
+
+Behind The Diary
+
+</h2>
+
+<p>
+
+The Incomplete Diary is not merely a collection of quotes.
+
+It is a home for unfinished conversations,
+late-night thoughts,
+unspoken emotions,
+and the feelings we often hide behind a smile.
+
+Every line is written with honesty.
+
+Every pause has meaning.
+
+Every story belongs to someone.
+
+Perhaps...
+
+one of them belongs to you.
+
+</p>
+
+</div>
+
+<div class="aboutRight">
+
+<div class="aboutCard">
+
+<h3>
+
+Every Story Begins Somewhere
+
+</h3>
+
+<p>
+
+Some pages heal.
+
+Some pages hurt.
+
+Some pages simply remind us
+that we are still human.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- ===================== FEATURES ===================== -->
+
+<section>
+
+<h2 class="sectionTitle">
+
+Inside The Diary
+
+</h2>
+
+<p class="sectionSub">
+
+A place where words become memories.
+
+</p>
+
+<div class="featureGrid">
+
+<div class="feature">
+
+<span>📖</span>
+
+<h3>Original Quotes</h3>
+
+<p>
+
+Every quote is written from genuine emotions and personal reflections.
+
+</p>
+
+</div>
+
+<div class="feature">
+
+<span>🎙</span>
+
+<h3>Voice Overs</h3>
+
+<p>
+
+Experience every story through expressive narration.
+
+</p>
+
+</div>
+
+<div class="feature">
+
+<span>🌙</span>
+
+<h3>Midnight Thoughts</h3>
+
+<p>
+
+The quietest hours often create the loudest feelings.
+
+</p>
+
+</div>
+
+<div class="feature">
+
+<span>☕</span>
+
+<h3>Coffee & Silence</h3>
+
+<p>
+
+Simple moments.
+Deep emotions.
+Beautiful words.
+
+</p>
+
+</div>
+
+</div>
+
+</section> 
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+<div class="footerContainer">
+
+<h2>The Incomplete Diary</h2>
+
+<p>
+
+"You reached the last page.
+
+But not the last story."
+
+</p>
+
+<div class="footerLinks">
+
+<a href="#">Home</a>
+
+<a href="#entry">Diary</a>
+
+<a href="#about">About</a>
+
+<a href="https://instagram.com/theincompletediaryofficial" target="_blank">
 
 Instagram
 
 </a>
 
-<a href="#featured" class="btn secondary">
-
-Explore
-
-</a>
-
 </div>
 
-<div class="scroll">
+<div class="copyright">
 
-↓ Scroll to Begin ↓
+© <span id="year"></span> The Incomplete Diary
 
 </div>
 
 </div>
-
-</section>
-<!-- ================= FEATURED QUOTE ================= -->
-
-<section id="featured">
-
-    <h2 class="sectionTitle">Latest Entry</h2>
-
-    <p class="sectionText">
-
-        Every page begins with a feeling.
-
-    </p>
-
-    <div class="quoteCard">
-
-        <span class="quoteMark">“</span>
-
-        <p class="quote">
-
-            Sometimes the hardest goodbye is the one you never got to say.
-
-        </p>
-
-        <div class="quoteAuthor">
-
-            — The Incomplete Diary
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- ================= VOICE OVERS ================= -->
-
-<section>
-
-    <h2 class="sectionTitle">Voice Overs</h2>
-
-    <p class="sectionText">
-
-        Words become emotions when spoken.
-
-    </p>
-
-    <div class="cards">
-
-        <div class="card">
-
-            <div class="emoji">🎙</div>
-
-            <h3>Latest Voice</h3>
-
-            <p>
-
-                Listen to my latest spoken diary entry on Instagram.
-
-            </p>
-
-            <a href="https://instagram.com/theincompletediaryofficial" target="_blank">
-
-                Watch Reel →
-
-            </a>
-
-        </div>
-
-        <div class="card">
-
-            <div class="emoji">🖋</div>
-
-            <h3>Written Thoughts</h3>
-
-            <p>
-
-                Read short reflections that never made it into conversations.
-
-            </p>
-
-            <a href="#">
-
-                Coming Soon →
-
-            </a>
-
-        </div>
-
-        <div class="card">
-
-            <div class="emoji">🌙</div>
-
-            <h3>Midnight Notes</h3>
-
-            <p>
-
-                Quiet stories written for restless hearts.
-
-            </p>
-
-            <a href="#">
-
-                Coming Soon →
-
-            </a>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- ================= INSTAGRAM ================= -->
-
-<section class="instagram">
-
-    <h2 class="sectionTitle">Follow The Journey</h2>
-
-    <p class="sectionText">
-
-        Every unfinished story finds its reader.
-
-    </p>
-
-    <a class="instaButton"
-
-       href="https://instagram.com/theincompletediaryofficial"
-
-       target="_blank">
-
-        @theincompletediaryofficial
-
-    </a>
-
-</section>
-
-
-
-<!-- ================= ABOUT ================= -->
-
-<section>
-
-    <h2 class="sectionTitle">
-
-        About The Diary
-
-    </h2>
-
-    <p class="aboutText">
-
-        The Incomplete Diary is a collection of thoughts,
-
-        emotions, unfinished conversations and quiet moments.
-
-        Every quote is written from lived feelings—
-
-        because not every story gets an ending,
-
-        but every story deserves to be remembered.
-
-    </p>
-
-</section>
-<!-- ================= FOOTER ================= -->
-
-<footer>
-
-    <div class="footerLogo">
-
-        The Incomplete Diary
-
-    </div>
-
-    <p class="footerQuote">
-
-        "Every story doesn't need an ending.
-        Some simply become a part of who we are."
-
-    </p>
-
-    <div class="footerLinks">
-
-        <a href="#">Home</a>
-
-        <a href="#">Quotes</a>
-
-        <a href="#">Voice Overs</a>
-
-        <a href="#">About</a>
-
-        <a href="https://instagram.com/theincompletediaryofficial" target="_blank">
-
-            Instagram
-
-        </a>
-
-    </div>
-
-    <div class="copyright">
-
-        © 2026 The Incomplete Diary
-
-    </div>
 
 </footer>
 
+<!-- Scroll Progress -->
 
+<div id="progressBar"></div>
 
-<!-- Scroll Button -->
+<!-- Back To Top -->
 
 <button id="topBtn">
 
@@ -901,159 +1311,49 @@ Explore
 
 </button>
 
-
-
-<style>
-
-/* ================= FOOTER ================= */
-
-footer{
-
-background:#2B2B2B;
-
-color:white;
-
-padding:90px 8%;
-
-text-align:center;
-
-margin-top:120px;
-
-}
-
-.footerLogo{
-
-font-family:'Cormorant Garamond',serif;
-
-font-size:42px;
-
-letter-spacing:4px;
-
-margin-bottom:25px;
-
-}
-
-.footerQuote{
-
-max-width:650px;
-
-margin:auto;
-
-font-size:18px;
-
-line-height:1.8;
-
-color:#d5d5d5;
-
-margin-bottom:40px;
-
-}
-
-.footerLinks{
-
-display:flex;
-
-justify-content:center;
-
-flex-wrap:wrap;
-
-gap:30px;
-
-margin-bottom:45px;
-
-}
-
-.footerLinks a{
-
-color:#F7F4ED;
-
-transition:.3s;
-
-}
-
-.footerLinks a:hover{
-
-color:#C6A15B;
-
-}
-
-.copyright{
-
-font-size:13px;
-
-letter-spacing:2px;
-
-color:#999;
-
-}
-
-/* Scroll Button */
-
-#topBtn{
-
-position:fixed;
-
-right:25px;
-
-bottom:25px;
-
-width:55px;
-
-height:55px;
-
-border:none;
-
-border-radius:50%;
-
-background:#A87A4D;
-
-color:white;
-
-font-size:22px;
-
-cursor:pointer;
-
-display:none;
-
-box-shadow:0 15px 35px rgba(0,0,0,.18);
-
-transition:.3s;
-
-}
-
-#topBtn:hover{
-
-transform:translateY(-5px);
-
-background:#2B2B2B;
-
-}
-
-</style>
-
-
-
 <script>
 
-/* Scroll Button */
+/* Current Year */
 
-const btn=document.getElementById("topBtn");
+document.getElementById("year").textContent=new Date().getFullYear();
 
-window.onscroll=function(){
 
-if(document.documentElement.scrollTop>500){
 
-btn.style.display="block";
+/* Scroll Progress */
+
+window.addEventListener("scroll",()=>{
+
+const scrollTop=document.documentElement.scrollTop;
+
+const height=document.documentElement.scrollHeight-document.documentElement.clientHeight;
+
+const progress=(scrollTop/height)*100;
+
+document.getElementById("progressBar").style.width=progress+"%";
+
+});
+
+
+
+/* Back To Top */
+
+const topBtn=document.getElementById("topBtn");
+
+window.addEventListener("scroll",()=>{
+
+if(window.scrollY>400){
+
+topBtn.classList.add("show");
 
 }else{
 
-btn.style.display="none";
+topBtn.classList.remove("show");
 
 }
 
-}
+});
 
-btn.onclick=function(){
+topBtn.onclick=()=>{
 
 window.scrollTo({
 
@@ -1063,7 +1363,7 @@ behavior:"smooth"
 
 });
 
-}
+};
 
 
 
@@ -1075,54 +1375,238 @@ entries.forEach(entry=>{
 
 if(entry.isIntersecting){
 
-entry.target.animate([
+entry.target.classList.add("visible");
 
-{
+}
 
-opacity:0,
-
-transform:'translateY(50px)'
+});
 
 },
 
 {
 
-opacity:1,
-
-transform:'translateY(0)'
-
-}
-
-],{
-
-duration:900,
-
-fill:'forwards'
+threshold:.15
 
 });
 
-}
-
-});
-
-});
-
-document.querySelectorAll("section,.card,.quoteCard").forEach(el=>{
+document.querySelectorAll("section,.voiceCard,.feature,.diaryPage,.instagramBox,.aboutCard").forEach(el=>{
 
 observer.observe(el);
 
 });
 
-
-
-/* Dynamic Year */
-
-document.querySelector(".copyright").innerHTML=
-
-`© ${new Date().getFullYear()} The Incomplete Diary`;
-
 </script>
+
+<style>
+
+/* ================= FOOTER ================= */
+
+footer{
+
+background:#272522;
+
+color:white;
+
+padding:120px 8% 70px;
+
+margin-top:100px;
+
+}
+
+.footerContainer{
+
+max-width:1000px;
+
+margin:auto;
+
+text-align:center;
+
+}
+
+.footerContainer h2{
+
+font-family:'Cormorant Garamond',serif;
+
+font-size:54px;
+
+margin-bottom:20px;
+
+letter-spacing:2px;
+
+}
+
+.footerContainer p{
+
+font-size:20px;
+
+line-height:2;
+
+color:#ddd;
+
+margin-bottom:50px;
+
+}
+
+.footerLinks{
+
+display:flex;
+
+justify-content:center;
+
+gap:40px;
+
+flex-wrap:wrap;
+
+margin-bottom:45px;
+
+}
+
+.footerLinks a{
+
+color:white;
+
+transition:.35s;
+
+}
+
+.footerLinks a:hover{
+
+color:#C5A46D;
+
+}
+
+.copyright{
+
+color:#999;
+
+letter-spacing:2px;
+
+font-size:13px;
+
+}
+
+/* ================= Progress ================= */
+
+#progressBar{
+
+position:fixed;
+
+top:0;
+
+left:0;
+
+height:4px;
+
+width:0;
+
+background:#C5A46D;
+
+z-index:99999;
+
+transition:.2s;
+
+}
+
+/* ================= Top Button ================= */
+
+#topBtn{
+
+position:fixed;
+
+bottom:30px;
+
+right:30px;
+
+width:55px;
+
+height:55px;
+
+border:none;
+
+border-radius:50%;
+
+background:#C5A46D;
+
+color:white;
+
+font-size:22px;
+
+cursor:pointer;
+
+opacity:0;
+
+visibility:hidden;
+
+transition:.35s;
+
+box-shadow:0 15px 35px rgba(0,0,0,.25);
+
+}
+
+#topBtn.show{
+
+opacity:1;
+
+visibility:visible;
+
+}
+
+#topBtn:hover{
+
+background:#272522;
+
+transform:translateY(-5px);
+
+}
+
+/* ================= Reveal Animation ================= */
+
+section,
+
+.voiceCard,
+
+.feature,
+
+.diaryPage,
+
+.instagramBox,
+
+.aboutCard{
+
+opacity:0;
+
+transform:translateY(60px);
+
+transition:1s;
+
+}
+
+.visible{
+
+opacity:1!important;
+
+transform:translateY(0)!important;
+
+}
+
+@media(max-width:768px){
+
+.footerContainer h2{
+
+font-size:40px;
+
+}
+
+.footerContainer p{
+
+font-size:17px;
+
+}
+
+}
+
+</style>
 
 </body>
 
-</html>
+</html>    
